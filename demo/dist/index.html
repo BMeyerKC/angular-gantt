@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js">
   <head>
     <meta charset="utf-8">
@@ -140,8 +140,9 @@
                                         <a href="" bs-collapse-toggle>Gantt</a>
                                     </h4>
                                 </div>
+                                <button type="button" ng-click="showGantt = !showGantt">Show/Hide</button>
                                 <div class="panel-collapse" bs-collapse-target>
-                                    <div class="panel-body">
+                                    <div class="panel-body" ng-show="showGantt">
                                         <gantt first-day-of-week="1"
                                                filter-task="{'name': options.filterTask}"
                                                filter-row="{'name': options.filterRow}"
