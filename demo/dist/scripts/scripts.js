@@ -27,11 +27,11 @@ angular.module('angularGanttDemoApp')
     .controller('MainCtrl', function($scope, $timeout, Uuid, Sample) {
         $scope.options = {
             mode: 'custom',
-            scale: 'day',
+            scale: 'hour',
             maxHeight: false,
             width: false,
             autoExpand: 'none',
-            taskOutOfRange: 'expand',
+            taskOutOfRange: 'truncate',
             fromDate: null,
             toDate: null,
             showWeekends: true,
@@ -240,8 +240,8 @@ angular.module('angularGanttDemoApp')
                     'timespan1': [
                         {
                             id: '1',
-                            from: new Date(2013, 9, 21, 8, 0, 0),
-                            to: new Date(2013, 9, 25, 15, 0, 0),
+                            from: moment().format(),
+                            to: moment().format(),
                             name: 'Sprint 1 Timespan',
                             priority: null,
                             //classes: [], //Set custom classes names to apply to the timespan.
